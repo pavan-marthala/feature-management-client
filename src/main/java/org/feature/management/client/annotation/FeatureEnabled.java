@@ -15,4 +15,10 @@ public @interface FeatureEnabled {
      * The name of the feature to check.
      */
     String value();
+
+    /**
+     * Optional fallback method name to execute if the feature is disabled.
+     * The fallback method must be in the same class and have the same signature as the annotated method.
+     */
+    String fallbackMethod() default "";
 }
